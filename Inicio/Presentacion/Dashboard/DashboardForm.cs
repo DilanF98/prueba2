@@ -70,11 +70,6 @@ namespace Presentacion
             dgvProductos.DataSource = topProductos;
         }
 
-        public DashboardForm(VendedorDTO vendedor)
-        {
-            InitializeComponent();
-            Utilidades.InterfazHelper.CargarDatosPerfil(lblNombre, lblRol);
-        }
         private void btnDashboard_Click_1(object sender, EventArgs e)
         {
             DashboardForm dashboard = new DashboardForm();

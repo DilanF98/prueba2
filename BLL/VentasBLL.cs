@@ -58,7 +58,7 @@ namespace BLL
 
         public VentaDTO ObtenerPorId(int idVenta)
         {
-            return ventasDao.ObtenerTodos().Find(v => v.IdVenta == idVenta);
+            return ventasDao.ObtenerPorId(idVenta);
         }
 
         public string ObtenerNombreProducto(string codigo)

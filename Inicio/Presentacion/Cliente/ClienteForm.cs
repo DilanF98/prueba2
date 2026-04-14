@@ -41,27 +41,6 @@ namespace Presentacion
             cardClientes.Text2 = lista.Count + " Clientes";
         }
 
-        private void Listar()
-        {
-            try
-            {
-                var lista = bll.ObtenerTodos();
-
-                if (lista != null && lista.Count > 0)
-                {
-                    dgvClientes.DataSource = null;
-                    dgvClientes.DataSource = lista;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar la tabla " + ex.Message);
-            }
-        }
-
-
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             DashboardForm dashboard = new DashboardForm();

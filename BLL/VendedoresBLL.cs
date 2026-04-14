@@ -34,7 +34,8 @@ namespace BLL
             if(string.IsNullOrEmpty(vendedor.Usuario))
                 throw new Exception("El usuario es obligatorio.");
             if (string.IsNullOrEmpty(vendedor.Contrasena))
-                dao.Actualizar(vendedor);
+                throw new Exception("La contraseña es obligatoria.");
+            dao.Actualizar(vendedor);
         }
 
         public void Eliminar(int idVendedor)

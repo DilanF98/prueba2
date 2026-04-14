@@ -58,6 +58,42 @@ namespace DAO
             }
             return lista;
         }
+
+        public VentaDTO ObtenerPorId(int idVenta)
+        {
+            using (MySqlConnection conn = conec.CrearConexion())
+            {
+                conn.Open();
+                string query = @"
+            SELECT v.id_venta, v.id_cliente_fk, v.id_vendedor_fk,
+                   c.nombre AS nombre_cliente,
+                   ve.nombre AS nombre_vendedor,
+                   v.fecha, v.total
+            FROM ventas v
+            INNER JOIN clientes c ON c.id_cliente = v.id_cliente_fk
+            INNER JOIN vendedores ve ON ve.id_vendedor = v.id_vendedor_fk
+            WHERE v.id_venta = @id";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", idVenta);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    VentaDTO v = new VentaDTO();
+                    v.IdVenta = reader.GetInt32("id_venta");
+                    v.IdClienteFk = reader.GetInt32("id_cliente_fk");
+                    v.IdVendedorFk = reader.GetInt32("id_vendedor_fk");
+                    v.NombreCliente = reader.GetString("nombre_cliente");
+                    v.NombreVendedor = reader.GetString("nombre_vendedor");
+                    v.Fecha = reader.GetDateTime("fecha");
+                    v.Total = reader.GetDecimal("total");
+                    return v;
+                }
+                return null;
+            }
+        }
+
         public void Eliminar(int idVenta)
         {
             using (MySqlConnection conn = conec.CrearConexion())
