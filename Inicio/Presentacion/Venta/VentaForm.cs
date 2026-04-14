@@ -29,6 +29,13 @@ namespace Presentacion
             VentasBLL ventasBll = new VentasBLL();
             List<VentaDTO> lista = ventasBll.ObtenerTodas();
             dgvVentas.DataSource = lista;
+
+            // Calcular y mostrar el total en el ParrotCard
+            decimal totalVendido = lista.Sum(v => v.Total);
+            cardTotalVendido.Text2 = "₡ " + totalVendido.ToString("N0");
+
+            // Cantidad de ventas del otro ParrotCard
+            cardVentasRealizadas.Text2 = lista.Count + " Ventas";
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)

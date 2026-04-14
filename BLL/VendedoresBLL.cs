@@ -31,7 +31,10 @@ namespace BLL
         {
             if (string.IsNullOrEmpty(vendedor.Nombre))
                 throw new Exception("El nombre es obligatorio.");
-            dao.Actualizar(vendedor);
+            if(string.IsNullOrEmpty(vendedor.Usuario))
+                throw new Exception("El usuario es obligatorio.");
+            if (string.IsNullOrEmpty(vendedor.Contrasena))
+                dao.Actualizar(vendedor);
         }
 
         public void Eliminar(int idVendedor)

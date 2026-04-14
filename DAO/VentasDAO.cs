@@ -49,8 +49,8 @@ namespace DAO
                     v.IdVenta = reader.GetInt32("id_venta");
                     v.IdClienteFk = reader.GetInt32("id_cliente_fk");
                     v.IdVendedorFk = reader.GetInt32("id_vendedor_fk");
-                    v.NombreCliente = reader.GetString("nombre_cliente");   // NUEVO
-                    v.NombreVendedor = reader.GetString("nombre_vendedor");  // NUEVO
+                    v.NombreCliente = reader.GetString("nombre_cliente");
+                    v.NombreVendedor = reader.GetString("nombre_vendedor");
                     v.Fecha = reader.GetDateTime("fecha");
                     v.Total = reader.GetDecimal("total");
                     lista.Add(v);

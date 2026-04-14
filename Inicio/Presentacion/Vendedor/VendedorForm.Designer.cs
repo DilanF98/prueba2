@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendedorForm));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -51,6 +51,10 @@
             btnPdf = new ReaLTaiizor.Controls.Button();
             btnExcel = new ReaLTaiizor.Controls.Button();
             dgvVendedores = new ReaLTaiizor.Controls.PoisonDataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            nombre = new DataGridViewTextBoxColumn();
+            Usuario = new DataGridViewTextBoxColumn();
+            Rol = new DataGridViewTextBoxColumn();
             tableLayoutPanel7 = new TableLayoutPanel();
             cardStockTotal = new ReaLTaiizor.Controls.ParrotCard();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -67,10 +71,6 @@
             tableLayoutPanel5 = new TableLayoutPanel();
             lblRol = new ReaLTaiizor.Controls.HeaderLabel();
             lblNombre = new ReaLTaiizor.Controls.HeaderLabel();
-            Id = new DataGridViewTextBoxColumn();
-            nombre = new DataGridViewTextBoxColumn();
-            Usuario = new DataGridViewTextBoxColumn();
-            Rol = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -90,7 +90,7 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 202F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 289F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(panel1, 1, 0);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 0);
@@ -100,7 +100,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1296, 637);
+            tableLayoutPanel1.Size = new Size(1851, 1062);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -108,10 +108,10 @@
             panel1.BackColor = SystemColors.Control;
             panel1.Controls.Add(tableLayoutPanel2);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(205, 2);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(293, 3);
+            panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1088, 633);
+            panel1.Size = new Size(1554, 1056);
             panel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -125,15 +125,15 @@
             tableLayoutPanel2.Controls.Add(tableLayoutPanel7, 0, 4);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
-            tableLayoutPanel2.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel2.Margin = new Padding(4, 3, 4, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 5;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 63F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 63F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.Size = new Size(1088, 633);
+            tableLayoutPanel2.Size = new Size(1554, 1056);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -146,8 +146,8 @@
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new Padding(0, 0, 43, 0);
-            flowLayoutPanel1.Size = new Size(1088, 38);
+            flowLayoutPanel1.Padding = new Padding(0, 0, 61, 0);
+            flowLayoutPanel1.Size = new Size(1554, 63);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // lblEncabezado
@@ -156,10 +156,10 @@
             lblEncabezado.BackColor = Color.Transparent;
             lblEncabezado.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEncabezado.ForeColor = Color.FromArgb(103, 121, 141);
-            lblEncabezado.Location = new Point(901, 7);
-            lblEncabezado.Margin = new Padding(3, 7, 3, 0);
+            lblEncabezado.Location = new Point(1278, 12);
+            lblEncabezado.Margin = new Padding(4, 12, 4, 0);
             lblEncabezado.Name = "lblEncabezado";
-            lblEncabezado.Size = new Size(141, 21);
+            lblEncabezado.Size = new Size(211, 32);
             lblEncabezado.TabIndex = 15;
             lblEncabezado.Text = "Sistema de ventas";
             // 
@@ -173,10 +173,10 @@
             btnNotificacion.ForeColor = Color.FromArgb(0, 75, 115);
             btnNotificacion.Image = (Image)resources.GetObject("btnNotificacion.Image");
             btnNotificacion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNotificacion.Location = new Point(855, 7);
-            btnNotificacion.Margin = new Padding(0, 7, 0, 0);
+            btnNotificacion.Location = new Point(1213, 12);
+            btnNotificacion.Margin = new Padding(0, 12, 0, 0);
             btnNotificacion.Name = "btnNotificacion";
-            btnNotificacion.Size = new Size(43, 21);
+            btnNotificacion.Size = new Size(61, 32);
             btnNotificacion.TabIndex = 16;
             btnNotificacion.UseVisualStyleBackColor = false;
             btnNotificacion.Click += btnNotificacion_Click;
@@ -185,10 +185,10 @@
             // 
             panel2.Controls.Add(tableLayoutPanel8);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 40);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(4, 66);
+            panel2.Margin = new Padding(4, 3, 4, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1082, 34);
+            panel2.Size = new Size(1546, 57);
             panel2.TabIndex = 4;
             // 
             // tableLayoutPanel8
@@ -204,11 +204,11 @@
             tableLayoutPanel8.Controls.Add(lblVendedores, 0, 0);
             tableLayoutPanel8.Dock = DockStyle.Fill;
             tableLayoutPanel8.Location = new Point(0, 0);
-            tableLayoutPanel8.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel8.Margin = new Padding(4, 3, 4, 3);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 1;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel8.Size = new Size(1082, 34);
+            tableLayoutPanel8.Size = new Size(1546, 57);
             tableLayoutPanel8.TabIndex = 0;
             // 
             // btnEliminar
@@ -222,12 +222,12 @@
             btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
             btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
             btnEliminar.InactiveColor = Color.Brown;
-            btnEliminar.Location = new Point(943, 2);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
+            btnEliminar.Location = new Point(1347, 3);
+            btnEliminar.Margin = new Padding(4, 3, 4, 3);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.PressedBorderColor = Color.Brown;
             btnEliminar.PressedColor = Color.Brown;
-            btnEliminar.Size = new Size(136, 30);
+            btnEliminar.Size = new Size(195, 51);
             btnEliminar.TabIndex = 20;
             btnEliminar.Text = "    Eliminar";
             btnEliminar.TextAlignment = StringAlignment.Near;
@@ -244,12 +244,12 @@
             btnActualizar.Image = (Image)resources.GetObject("btnActualizar.Image");
             btnActualizar.ImageAlign = ContentAlignment.MiddleLeft;
             btnActualizar.InactiveColor = Color.FromArgb(0, 51, 81);
-            btnActualizar.Location = new Point(803, 2);
-            btnActualizar.Margin = new Padding(3, 2, 3, 2);
+            btnActualizar.Location = new Point(1147, 3);
+            btnActualizar.Margin = new Padding(4, 3, 4, 3);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.PressedBorderColor = Color.FromArgb(0, 51, 81);
             btnActualizar.PressedColor = Color.FromArgb(0, 51, 81);
-            btnActualizar.Size = new Size(134, 30);
+            btnActualizar.Size = new Size(192, 51);
             btnActualizar.TabIndex = 19;
             btnActualizar.Text = "    Actualizar";
             btnActualizar.TextAlignment = StringAlignment.Near;
@@ -266,12 +266,12 @@
             btnInsertar.Image = (Image)resources.GetObject("btnInsertar.Image");
             btnInsertar.ImageAlign = ContentAlignment.MiddleLeft;
             btnInsertar.InactiveColor = Color.FromArgb(32, 34, 37);
-            btnInsertar.Location = new Point(663, 2);
-            btnInsertar.Margin = new Padding(3, 2, 3, 2);
+            btnInsertar.Location = new Point(947, 3);
+            btnInsertar.Margin = new Padding(4, 3, 4, 3);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.PressedBorderColor = Color.Black;
             btnInsertar.PressedColor = Color.Black;
-            btnInsertar.Size = new Size(134, 30);
+            btnInsertar.Size = new Size(192, 51);
             btnInsertar.TabIndex = 18;
             btnInsertar.Text = "    Insertar";
             btnInsertar.TextAlignment = StringAlignment.Near;
@@ -285,10 +285,10 @@
             lblVendedores.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblVendedores.ForeColor = Color.Black;
             lblVendedores.Location = new Point(0, 0);
-            lblVendedores.Margin = new Padding(0, 0, 3, 0);
+            lblVendedores.Margin = new Padding(0, 0, 4, 0);
             lblVendedores.Name = "lblVendedores";
-            lblVendedores.Padding = new Padding(13, 0, 0, 0);
-            lblVendedores.Size = new Size(287, 34);
+            lblVendedores.Padding = new Padding(19, 0, 0, 0);
+            lblVendedores.Size = new Size(420, 57);
             lblVendedores.TabIndex = 17;
             lblVendedores.Text = "Lista de Vendedores";
             // 
@@ -298,11 +298,11 @@
             panel3.Controls.Add(tableLayoutPanel6);
             panel3.Dock = DockStyle.Fill;
             panel3.EdgeColor = SystemColors.Control;
-            panel3.Location = new Point(18, 76);
-            panel3.Margin = new Padding(18, 0, 18, 0);
+            panel3.Location = new Point(26, 126);
+            panel3.Margin = new Padding(26, 0, 26, 0);
             panel3.Name = "panel3";
-            panel3.Padding = new Padding(4);
-            panel3.Size = new Size(1052, 35);
+            panel3.Padding = new Padding(6, 7, 6, 7);
+            panel3.Size = new Size(1502, 58);
             panel3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel3.TabIndex = 5;
             panel3.Text = "panel3";
@@ -317,12 +317,12 @@
             tableLayoutPanel6.Controls.Add(btnPdf, 1, 0);
             tableLayoutPanel6.Controls.Add(btnExcel, 0, 0);
             tableLayoutPanel6.Dock = DockStyle.Fill;
-            tableLayoutPanel6.Location = new Point(4, 4);
-            tableLayoutPanel6.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel6.Location = new Point(6, 7);
+            tableLayoutPanel6.Margin = new Padding(4, 3, 4, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(1044, 27);
+            tableLayoutPanel6.Size = new Size(1490, 44);
             tableLayoutPanel6.TabIndex = 0;
             // 
             // btnPdf
@@ -336,12 +336,12 @@
             btnPdf.Image = (Image)resources.GetObject("btnPdf.Image");
             btnPdf.ImageAlign = ContentAlignment.MiddleRight;
             btnPdf.InactiveColor = Color.Brown;
-            btnPdf.Location = new Point(107, 2);
-            btnPdf.Margin = new Padding(3, 2, 3, 2);
+            btnPdf.Location = new Point(153, 3);
+            btnPdf.Margin = new Padding(4, 3, 4, 3);
             btnPdf.Name = "btnPdf";
             btnPdf.PressedBorderColor = Color.Brown;
             btnPdf.PressedColor = Color.Brown;
-            btnPdf.Size = new Size(98, 23);
+            btnPdf.Size = new Size(141, 38);
             btnPdf.TabIndex = 17;
             btnPdf.Text = "Exportar";
             btnPdf.TextAlignment = StringAlignment.Near;
@@ -357,12 +357,12 @@
             btnExcel.Image = (Image)resources.GetObject("btnExcel.Image");
             btnExcel.ImageAlign = ContentAlignment.MiddleRight;
             btnExcel.InactiveColor = Color.ForestGreen;
-            btnExcel.Location = new Point(3, 2);
-            btnExcel.Margin = new Padding(3, 2, 3, 2);
+            btnExcel.Location = new Point(4, 3);
+            btnExcel.Margin = new Padding(4, 3, 4, 3);
             btnExcel.Name = "btnExcel";
             btnExcel.PressedBorderColor = Color.ForestGreen;
             btnExcel.PressedColor = Color.ForestGreen;
-            btnExcel.Size = new Size(98, 23);
+            btnExcel.Size = new Size(141, 38);
             btnExcel.TabIndex = 16;
             btnExcel.Text = "Exportar";
             btnExcel.TextAlignment = StringAlignment.Near;
@@ -372,348 +372,59 @@
             dgvVendedores.AllowUserToAddRows = false;
             dgvVendedores.AllowUserToDeleteRows = false;
             dgvVendedores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvVendedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = SystemColors.Control;
+            dataGridViewCellStyle21.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.True;
+            dgvVendedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             dgvVendedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVendedores.BackgroundColor = Color.FromArgb(255, 255, 255);
             dgvVendedores.BorderStyle = BorderStyle.None;
             dgvVendedores.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvVendedores.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvVendedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle22.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle22.ForeColor = Color.Gray;
+            dataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle22.SelectionForeColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
+            dgvVendedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             dgvVendedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVendedores.Columns.AddRange(new DataGridViewColumn[] { Id, nombre, Usuario, Rol });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle3.SelectionBackColor = Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvVendedores.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle23.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle23.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle23.SelectionBackColor = Color.Gainsboro;
+            dataGridViewCellStyle23.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
+            dgvVendedores.DefaultCellStyle = dataGridViewCellStyle23;
             dgvVendedores.Dock = DockStyle.Fill;
             dgvVendedores.EnableHeadersVisualStyles = false;
             dgvVendedores.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvVendedores.GridColor = Color.FromArgb(255, 255, 255);
-            dgvVendedores.Location = new Point(13, 122);
-            dgvVendedores.Margin = new Padding(13, 11, 13, 11);
+            dgvVendedores.Location = new Point(19, 202);
+            dgvVendedores.Margin = new Padding(19, 18, 19, 18);
             dgvVendedores.Name = "dgvVendedores";
             dgvVendedores.ReadOnly = true;
             dgvVendedores.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvVendedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle24.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle24.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle24.SelectionBackColor = Color.Gainsboro;
+            dataGridViewCellStyle24.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
+            dgvVendedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             dgvVendedores.RowHeadersWidth = 51;
             dgvVendedores.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvVendedores.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.BackColor = Color.White;
+            dataGridViewCellStyle25.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvVendedores.RowsDefaultCellStyle = dataGridViewCellStyle25;
             dgvVendedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvVendedores.Size = new Size(1062, 395);
+            dgvVendedores.Size = new Size(1516, 661);
             dgvVendedores.TabIndex = 6;
             dgvVendedores.CellContentClick += dgvVendedores_CellContentClick;
-            // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.ColumnCount = 2;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            tableLayoutPanel7.Controls.Add(cardStockTotal, 1, 0);
-            tableLayoutPanel7.Dock = DockStyle.Fill;
-            tableLayoutPanel7.Location = new Point(3, 530);
-            tableLayoutPanel7.Margin = new Padding(3, 2, 3, 2);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 1;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Size = new Size(1082, 101);
-            tableLayoutPanel7.TabIndex = 7;
-            // 
-            // cardStockTotal
-            // 
-            cardStockTotal.BackColor = Color.Transparent;
-            cardStockTotal.Color1 = Color.LightGray;
-            cardStockTotal.Color2 = Color.White;
-            cardStockTotal.Dock = DockStyle.Fill;
-            cardStockTotal.Font = new Font("Segoe UI Black", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cardStockTotal.ForeColor = Color.Black;
-            cardStockTotal.Location = new Point(784, 11);
-            cardStockTotal.Margin = new Padding(27, 11, 27, 11);
-            cardStockTotal.Name = "cardStockTotal";
-            cardStockTotal.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            cardStockTotal.Size = new Size(271, 79);
-            cardStockTotal.TabIndex = 1;
-            cardStockTotal.Text = "parrotCard2";
-            cardStockTotal.Text1 = "Vendedores Activos";
-            cardStockTotal.Text2 = "6 Vendedores";
-            cardStockTotal.Text3 = "";
-            cardStockTotal.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(btnLogout, 0, 9);
-            tableLayoutPanel3.Controls.Add(btnVendedores, 0, 6);
-            tableLayoutPanel3.Controls.Add(btnVentas, 0, 5);
-            tableLayoutPanel3.Controls.Add(btnClientes, 0, 4);
-            tableLayoutPanel3.Controls.Add(btnProductos, 0, 3);
-            tableLayoutPanel3.Controls.Add(btnDashboard, 0, 2);
-            tableLayoutPanel3.Controls.Add(lblSubtitulo, 0, 1);
-            tableLayoutPanel3.Controls.Add(lblTitulo, 0, 0);
-            tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 8);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 2);
-            tableLayoutPanel3.Margin = new Padding(3, 2, 3, 2);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 10;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 5F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 45F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
-            tableLayoutPanel3.Size = new Size(196, 633);
-            tableLayoutPanel3.TabIndex = 4;
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.Transparent;
-            btnLogout.BorderColor = Color.Brown;
-            btnLogout.Dock = DockStyle.Fill;
-            btnLogout.EnteredBorderColor = Color.Brown;
-            btnLogout.EnteredColor = Color.Brown;
-            btnLogout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Image = null;
-            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.InactiveColor = Color.Brown;
-            btnLogout.Location = new Point(3, 592);
-            btnLogout.Margin = new Padding(3, 2, 3, 2);
-            btnLogout.Name = "btnLogout";
-            btnLogout.PressedBorderColor = Color.Brown;
-            btnLogout.PressedColor = Color.Brown;
-            btnLogout.Size = new Size(190, 39);
-            btnLogout.TabIndex = 24;
-            btnLogout.Text = "Cerrar Sesion";
-            btnLogout.TextAlignment = StringAlignment.Center;
-            btnLogout.Click += btnLogout_Click;
-            // 
-            // btnVendedores
-            // 
-            btnVendedores.BackColor = SystemColors.Control;
-            btnVendedores.Dock = DockStyle.Fill;
-            btnVendedores.FlatAppearance.BorderSize = 0;
-            btnVendedores.FlatStyle = FlatStyle.Flat;
-            btnVendedores.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVendedores.ForeColor = Color.FromArgb(0, 75, 115);
-            btnVendedores.Image = (Image)resources.GetObject("btnVendedores.Image");
-            btnVendedores.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVendedores.Location = new Point(0, 234);
-            btnVendedores.Margin = new Padding(0);
-            btnVendedores.Name = "btnVendedores";
-            btnVendedores.Size = new Size(196, 41);
-            btnVendedores.TabIndex = 10;
-            btnVendedores.Text = "Vendedores";
-            btnVendedores.UseVisualStyleBackColor = false;
-            btnVendedores.Click += btnVendedores_Click;
-            // 
-            // btnVentas
-            // 
-            btnVentas.BackColor = Color.Transparent;
-            btnVentas.Dock = DockStyle.Fill;
-            btnVentas.FlatAppearance.BorderSize = 0;
-            btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVentas.ForeColor = Color.FromArgb(0, 75, 115);
-            btnVentas.Image = (Image)resources.GetObject("btnVentas.Image");
-            btnVentas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVentas.Location = new Point(0, 193);
-            btnVentas.Margin = new Padding(0);
-            btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(196, 41);
-            btnVentas.TabIndex = 9;
-            btnVentas.Text = "Ventas";
-            btnVentas.UseVisualStyleBackColor = false;
-            btnVentas.Click += btnVentas_Click;
-            // 
-            // btnClientes
-            // 
-            btnClientes.BackColor = Color.Transparent;
-            btnClientes.Dock = DockStyle.Fill;
-            btnClientes.FlatAppearance.BorderSize = 0;
-            btnClientes.FlatStyle = FlatStyle.Flat;
-            btnClientes.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClientes.ForeColor = Color.FromArgb(0, 75, 115);
-            btnClientes.Image = (Image)resources.GetObject("btnClientes.Image");
-            btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClientes.Location = new Point(0, 152);
-            btnClientes.Margin = new Padding(0);
-            btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(196, 41);
-            btnClientes.TabIndex = 8;
-            btnClientes.Text = "Clientes";
-            btnClientes.UseVisualStyleBackColor = false;
-            btnClientes.Click += btnClientes_Click;
-            // 
-            // btnProductos
-            // 
-            btnProductos.BackColor = Color.Transparent;
-            btnProductos.Dock = DockStyle.Fill;
-            btnProductos.FlatAppearance.BorderSize = 0;
-            btnProductos.FlatStyle = FlatStyle.Flat;
-            btnProductos.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProductos.ForeColor = Color.FromArgb(0, 75, 115);
-            btnProductos.Image = (Image)resources.GetObject("btnProductos.Image");
-            btnProductos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductos.Location = new Point(0, 111);
-            btnProductos.Margin = new Padding(0);
-            btnProductos.Name = "btnProductos";
-            btnProductos.Size = new Size(196, 41);
-            btnProductos.TabIndex = 7;
-            btnProductos.Text = "Productos";
-            btnProductos.UseVisualStyleBackColor = false;
-            btnProductos.Click += btnProductos_Click;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.BackColor = Color.Transparent;
-            btnDashboard.Dock = DockStyle.Fill;
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = Color.FromArgb(0, 75, 115);
-            btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
-            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(0, 70);
-            btnDashboard.Margin = new Padding(0);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(196, 41);
-            btnDashboard.TabIndex = 6;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = false;
-            btnDashboard.Click += btnDashboard_Click;
-            // 
-            // lblSubtitulo
-            // 
-            lblSubtitulo.AutoSize = true;
-            lblSubtitulo.BackColor = Color.Transparent;
-            lblSubtitulo.Dock = DockStyle.Top;
-            lblSubtitulo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSubtitulo.ForeColor = Color.FromArgb(103, 121, 141);
-            lblSubtitulo.ImageAlign = ContentAlignment.TopCenter;
-            lblSubtitulo.Location = new Point(3, 41);
-            lblSubtitulo.Name = "lblSubtitulo";
-            lblSubtitulo.Size = new Size(190, 21);
-            lblSubtitulo.TabIndex = 5;
-            lblSubtitulo.Text = "Sistema de ventas";
-            lblSubtitulo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Dock = DockStyle.Top;
-            lblTitulo.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Image = (Image)resources.GetObject("lblTitulo.Image");
-            lblTitulo.ImageAlign = ContentAlignment.MiddleLeft;
-            lblTitulo.Location = new Point(3, 0);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Padding = new Padding(8, 7, 8, 7);
-            lblTitulo.Size = new Size(190, 39);
-            lblTitulo.TabIndex = 4;
-            lblTitulo.Text = "EdgeMarket PoS";
-            lblTitulo.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel4.Controls.Add(imgUsuario, 0, 0);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 1, 0);
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(3, 545);
-            tableLayoutPanel4.Margin = new Padding(3, 2, 3, 2);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
-            tableLayoutPanel4.Size = new Size(190, 43);
-            tableLayoutPanel4.TabIndex = 11;
-            // 
-            // imgUsuario
-            // 
-            imgUsuario.Anchor = AnchorStyles.Right;
-            imgUsuario.BackgroundImage = (Image)resources.GetObject("imgUsuario.BackgroundImage");
-            imgUsuario.BackgroundImageLayout = ImageLayout.Stretch;
-            imgUsuario.Location = new Point(6, 3);
-            imgUsuario.Margin = new Padding(3, 2, 3, 2);
-            imgUsuario.Name = "imgUsuario";
-            imgUsuario.Size = new Size(48, 36);
-            imgUsuario.TabIndex = 0;
-            imgUsuario.TabStop = false;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 1;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Controls.Add(lblRol, 0, 1);
-            tableLayoutPanel5.Controls.Add(lblNombre, 0, 0);
-            tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(60, 2);
-            tableLayoutPanel5.Margin = new Padding(3, 2, 3, 2);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 2;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(127, 39);
-            tableLayoutPanel5.TabIndex = 1;
-            // 
-            // lblRol
-            // 
-            lblRol.AutoSize = true;
-            lblRol.BackColor = Color.Transparent;
-            lblRol.Dock = DockStyle.Top;
-            lblRol.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRol.ForeColor = Color.FromArgb(103, 121, 141);
-            lblRol.ImageAlign = ContentAlignment.TopCenter;
-            lblRol.Location = new Point(3, 19);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(121, 20);
-            lblRol.TabIndex = 9;
-            lblRol.Text = "Rol**";
-            lblRol.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.BackColor = Color.Transparent;
-            lblNombre.Dock = DockStyle.Top;
-            lblNombre.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.ForeColor = Color.FromArgb(103, 121, 141);
-            lblNombre.ImageAlign = ContentAlignment.TopCenter;
-            lblNombre.Location = new Point(3, 0);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(121, 19);
-            lblNombre.TabIndex = 8;
-            lblNombre.Text = "Nombre**";
-            lblNombre.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // Id
             // 
@@ -748,14 +459,312 @@
             Rol.Name = "Rol";
             Rol.ReadOnly = true;
             // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.ColumnCount = 2;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel7.Controls.Add(cardStockTotal, 1, 0);
+            tableLayoutPanel7.Dock = DockStyle.Fill;
+            tableLayoutPanel7.Location = new Point(4, 884);
+            tableLayoutPanel7.Margin = new Padding(4, 3, 4, 3);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 1;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Size = new Size(1546, 169);
+            tableLayoutPanel7.TabIndex = 7;
+            // 
+            // cardStockTotal
+            // 
+            cardStockTotal.BackColor = Color.Transparent;
+            cardStockTotal.Color1 = Color.LightGray;
+            cardStockTotal.Color2 = Color.White;
+            cardStockTotal.Dock = DockStyle.Fill;
+            cardStockTotal.Font = new Font("Segoe UI Black", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cardStockTotal.ForeColor = Color.Black;
+            cardStockTotal.Location = new Point(1121, 18);
+            cardStockTotal.Margin = new Padding(39, 18, 39, 18);
+            cardStockTotal.Name = "cardStockTotal";
+            cardStockTotal.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            cardStockTotal.Size = new Size(386, 133);
+            cardStockTotal.TabIndex = 1;
+            cardStockTotal.Text = "parrotCard2";
+            cardStockTotal.Text1 = "Vendedores Activos";
+            cardStockTotal.Text2 = "Sin datos";
+            cardStockTotal.Text3 = "";
+            cardStockTotal.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Controls.Add(btnLogout, 0, 9);
+            tableLayoutPanel3.Controls.Add(btnVendedores, 0, 6);
+            tableLayoutPanel3.Controls.Add(btnVentas, 0, 5);
+            tableLayoutPanel3.Controls.Add(btnClientes, 0, 4);
+            tableLayoutPanel3.Controls.Add(btnProductos, 0, 3);
+            tableLayoutPanel3.Controls.Add(btnDashboard, 0, 2);
+            tableLayoutPanel3.Controls.Add(lblSubtitulo, 0, 1);
+            tableLayoutPanel3.Controls.Add(lblTitulo, 0, 0);
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 8);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(4, 3);
+            tableLayoutPanel3.Margin = new Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 10;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 5F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 45F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 62F));
+            tableLayoutPanel3.Size = new Size(281, 1056);
+            tableLayoutPanel3.TabIndex = 4;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.BorderColor = Color.Brown;
+            btnLogout.Dock = DockStyle.Fill;
+            btnLogout.EnteredBorderColor = Color.Brown;
+            btnLogout.EnteredColor = Color.Brown;
+            btnLogout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Image = null;
+            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogout.InactiveColor = Color.Brown;
+            btnLogout.Location = new Point(4, 992);
+            btnLogout.Margin = new Padding(4, 3, 4, 3);
+            btnLogout.Name = "btnLogout";
+            btnLogout.PressedBorderColor = Color.Brown;
+            btnLogout.PressedColor = Color.Brown;
+            btnLogout.Size = new Size(273, 61);
+            btnLogout.TabIndex = 24;
+            btnLogout.Text = "Cerrar Sesion";
+            btnLogout.TextAlignment = StringAlignment.Center;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // btnVendedores
+            // 
+            btnVendedores.BackColor = SystemColors.Control;
+            btnVendedores.Dock = DockStyle.Fill;
+            btnVendedores.FlatAppearance.BorderSize = 0;
+            btnVendedores.FlatStyle = FlatStyle.Flat;
+            btnVendedores.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVendedores.ForeColor = Color.FromArgb(0, 75, 115);
+            btnVendedores.Image = (Image)resources.GetObject("btnVendedores.Image");
+            btnVendedores.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVendedores.Location = new Point(0, 394);
+            btnVendedores.Margin = new Padding(0);
+            btnVendedores.Name = "btnVendedores";
+            btnVendedores.Size = new Size(281, 69);
+            btnVendedores.TabIndex = 10;
+            btnVendedores.Text = "      Vendedores";
+            btnVendedores.TextAlign = ContentAlignment.MiddleLeft;
+            btnVendedores.UseVisualStyleBackColor = false;
+            btnVendedores.Click += btnVendedores_Click;
+            // 
+            // btnVentas
+            // 
+            btnVentas.BackColor = Color.Transparent;
+            btnVentas.Dock = DockStyle.Fill;
+            btnVentas.FlatAppearance.BorderSize = 0;
+            btnVentas.FlatStyle = FlatStyle.Flat;
+            btnVentas.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVentas.ForeColor = Color.FromArgb(0, 75, 115);
+            btnVentas.Image = (Image)resources.GetObject("btnVentas.Image");
+            btnVentas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVentas.Location = new Point(0, 325);
+            btnVentas.Margin = new Padding(0);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(281, 69);
+            btnVentas.TabIndex = 9;
+            btnVentas.Text = "      Ventas";
+            btnVentas.TextAlign = ContentAlignment.MiddleLeft;
+            btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.Click += btnVentas_Click;
+            // 
+            // btnClientes
+            // 
+            btnClientes.BackColor = Color.Transparent;
+            btnClientes.Dock = DockStyle.Fill;
+            btnClientes.FlatAppearance.BorderSize = 0;
+            btnClientes.FlatStyle = FlatStyle.Flat;
+            btnClientes.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClientes.ForeColor = Color.FromArgb(0, 75, 115);
+            btnClientes.Image = (Image)resources.GetObject("btnClientes.Image");
+            btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClientes.Location = new Point(0, 256);
+            btnClientes.Margin = new Padding(0);
+            btnClientes.Name = "btnClientes";
+            btnClientes.Size = new Size(281, 69);
+            btnClientes.TabIndex = 8;
+            btnClientes.Text = "      Clientes";
+            btnClientes.TextAlign = ContentAlignment.MiddleLeft;
+            btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click;
+            // 
+            // btnProductos
+            // 
+            btnProductos.BackColor = Color.Transparent;
+            btnProductos.Dock = DockStyle.Fill;
+            btnProductos.FlatAppearance.BorderSize = 0;
+            btnProductos.FlatStyle = FlatStyle.Flat;
+            btnProductos.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProductos.ForeColor = Color.FromArgb(0, 75, 115);
+            btnProductos.Image = (Image)resources.GetObject("btnProductos.Image");
+            btnProductos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProductos.Location = new Point(0, 187);
+            btnProductos.Margin = new Padding(0);
+            btnProductos.Name = "btnProductos";
+            btnProductos.Size = new Size(281, 69);
+            btnProductos.TabIndex = 7;
+            btnProductos.Text = "      Productos";
+            btnProductos.TextAlign = ContentAlignment.MiddleLeft;
+            btnProductos.UseVisualStyleBackColor = false;
+            btnProductos.Click += btnProductos_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.Transparent;
+            btnDashboard.Dock = DockStyle.Fill;
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = Color.FromArgb(0, 75, 115);
+            btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
+            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.Location = new Point(0, 118);
+            btnDashboard.Margin = new Padding(0);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(281, 69);
+            btnDashboard.TabIndex = 6;
+            btnDashboard.Text = "      Dashboard";
+            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // lblSubtitulo
+            // 
+            lblSubtitulo.AutoSize = true;
+            lblSubtitulo.BackColor = Color.Transparent;
+            lblSubtitulo.Dock = DockStyle.Top;
+            lblSubtitulo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSubtitulo.ForeColor = Color.FromArgb(103, 121, 141);
+            lblSubtitulo.ImageAlign = ContentAlignment.TopCenter;
+            lblSubtitulo.Location = new Point(4, 69);
+            lblSubtitulo.Margin = new Padding(4, 0, 4, 0);
+            lblSubtitulo.Name = "lblSubtitulo";
+            lblSubtitulo.Size = new Size(273, 32);
+            lblSubtitulo.TabIndex = 5;
+            lblSubtitulo.Text = "Sistema de ventas";
+            lblSubtitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.Black;
+            lblTitulo.Image = (Image)resources.GetObject("lblTitulo.Image");
+            lblTitulo.ImageAlign = ContentAlignment.MiddleLeft;
+            lblTitulo.Location = new Point(4, 0);
+            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Padding = new Padding(11, 12, 11, 12);
+            lblTitulo.Size = new Size(273, 60);
+            lblTitulo.TabIndex = 4;
+            lblTitulo.Text = "EdgeMarket PoS";
+            lblTitulo.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel4.Controls.Add(imgUsuario, 0, 0);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 1, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(4, 913);
+            tableLayoutPanel4.Margin = new Padding(4, 3, 4, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel4.Size = new Size(273, 73);
+            tableLayoutPanel4.TabIndex = 11;
+            // 
+            // imgUsuario
+            // 
+            imgUsuario.Anchor = AnchorStyles.Right;
+            imgUsuario.BackgroundImage = (Image)resources.GetObject("imgUsuario.BackgroundImage");
+            imgUsuario.BackgroundImageLayout = ImageLayout.Stretch;
+            imgUsuario.Location = new Point(8, 6);
+            imgUsuario.Margin = new Padding(4, 3, 4, 3);
+            imgUsuario.Name = "imgUsuario";
+            imgUsuario.Size = new Size(69, 60);
+            imgUsuario.TabIndex = 0;
+            imgUsuario.TabStop = false;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Controls.Add(lblRol, 0, 1);
+            tableLayoutPanel5.Controls.Add(lblNombre, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(85, 3);
+            tableLayoutPanel5.Margin = new Padding(4, 3, 4, 3);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 2;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(184, 67);
+            tableLayoutPanel5.TabIndex = 1;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.BackColor = Color.Transparent;
+            lblRol.Dock = DockStyle.Top;
+            lblRol.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRol.ForeColor = Color.FromArgb(103, 121, 141);
+            lblRol.ImageAlign = ContentAlignment.TopCenter;
+            lblRol.Location = new Point(4, 33);
+            lblRol.Margin = new Padding(4, 0, 4, 0);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(176, 32);
+            lblRol.TabIndex = 9;
+            lblRol.Text = "Rol**";
+            lblRol.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.Transparent;
+            lblNombre.Dock = DockStyle.Top;
+            lblNombre.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNombre.ForeColor = Color.FromArgb(103, 121, 141);
+            lblNombre.ImageAlign = ContentAlignment.TopCenter;
+            lblNombre.Location = new Point(4, 0);
+            lblNombre.Margin = new Padding(4, 0, 4, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(176, 32);
+            lblNombre.TabIndex = 8;
+            lblNombre.Text = "Nombre**";
+            lblNombre.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // VendedorForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(235, 241, 251);
-            ClientSize = new Size(1296, 637);
+            ClientSize = new Size(1851, 1062);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "VendedorForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

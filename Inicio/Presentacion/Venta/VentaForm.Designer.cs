@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentaForm));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -377,33 +377,33 @@
             dgvVentas.AllowUserToAddRows = false;
             dgvVentas.AllowUserToDeleteRows = false;
             dgvVentas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvVentas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = SystemColors.Control;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgvVentas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVentas.BackgroundColor = Color.FromArgb(255, 255, 255);
             dgvVentas.BorderStyle = BorderStyle.None;
             dgvVentas.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvVentas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle12.ForeColor = Color.Gray;
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVentas.Columns.AddRange(new DataGridViewColumn[] { Id, IdCliente, NombreCliente, IdVendedor, NombreVendedor, fecha, Total });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle3.SelectionBackColor = Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvVentas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle13.SelectionBackColor = Color.Gainsboro;
+            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
+            dgvVentas.DefaultCellStyle = dataGridViewCellStyle13;
             dgvVentas.Dock = DockStyle.Fill;
             dgvVentas.EnableHeadersVisualStyles = false;
             dgvVentas.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -413,19 +413,19 @@
             dgvVentas.Name = "dgvVentas";
             dgvVentas.ReadOnly = true;
             dgvVentas.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle14.SelectionBackColor = Color.Gainsboro;
+            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
+            dgvVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             dgvVentas.RowHeadersWidth = 51;
             dgvVentas.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.BackColor = Color.White;
+            dataGridViewCellStyle15.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle15;
             dgvVentas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVentas.Size = new Size(1518, 658);
             dgvVentas.TabIndex = 6;
@@ -521,7 +521,7 @@
             cardVentasRealizadas.TabIndex = 1;
             cardVentasRealizadas.Text = "parrotCard2";
             cardVentasRealizadas.Text1 = "Ventas Realizadas";
-            cardVentasRealizadas.Text2 = "28 Ventas";
+            cardVentasRealizadas.Text2 = "Sin datos";
             cardVentasRealizadas.Text3 = "";
             cardVentasRealizadas.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAlias;
             // 
@@ -541,7 +541,7 @@
             cardTotalVendido.TabIndex = 0;
             cardTotalVendido.Text = "parrotCard1";
             cardTotalVendido.Text1 = "Total Vendido";
-            cardTotalVendido.Text2 = "₡ 850 000";
+            cardTotalVendido.Text2 = "Sin datos";
             cardTotalVendido.Text3 = "";
             cardTotalVendido.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAlias;
             // 
@@ -613,7 +613,8 @@
             btnVendedores.Name = "btnVendedores";
             btnVendedores.Size = new Size(280, 69);
             btnVendedores.TabIndex = 10;
-            btnVendedores.Text = "Vendedores";
+            btnVendedores.Text = "      Vendedores";
+            btnVendedores.TextAlign = ContentAlignment.MiddleLeft;
             btnVendedores.UseVisualStyleBackColor = false;
             btnVendedores.Visible = false;
             btnVendedores.Click += btnVendedores_Click;
@@ -633,7 +634,8 @@
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(280, 69);
             btnVentas.TabIndex = 9;
-            btnVentas.Text = "Ventas";
+            btnVentas.Text = "      Ventas";
+            btnVentas.TextAlign = ContentAlignment.MiddleLeft;
             btnVentas.UseVisualStyleBackColor = false;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -652,7 +654,8 @@
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(280, 69);
             btnClientes.TabIndex = 8;
-            btnClientes.Text = "Clientes";
+            btnClientes.Text = "      Clientes";
+            btnClientes.TextAlign = ContentAlignment.MiddleLeft;
             btnClientes.UseVisualStyleBackColor = false;
             btnClientes.Click += btnClientes_Click;
             // 
@@ -671,7 +674,8 @@
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(280, 69);
             btnProductos.TabIndex = 7;
-            btnProductos.Text = "Productos";
+            btnProductos.Text = "      Productos";
+            btnProductos.TextAlign = ContentAlignment.MiddleLeft;
             btnProductos.UseVisualStyleBackColor = false;
             btnProductos.Click += btnProductos_Click;
             // 
@@ -690,7 +694,8 @@
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(280, 69);
             btnDashboard.TabIndex = 6;
-            btnDashboard.Text = "Dashboard";
+            btnDashboard.Text = "      Dashboard";
+            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
             // 

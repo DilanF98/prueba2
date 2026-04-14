@@ -28,8 +28,11 @@ namespace Presentacion
             VendedoresBLL VendedorBLL = new VendedoresBLL();
             List<VendedorListadoDTO> lista = VendedorBLL.ObtenerTodos();
             dgvVendedores.DataSource = lista;
+
+            // Cantidad de vendedores en el card
+            cardStockTotal.Text2 = lista.Count + " Vendedores";
         }
-      
+
 
 
         private void btnDashboard_Click(object sender, EventArgs e)

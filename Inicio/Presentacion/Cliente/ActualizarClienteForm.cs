@@ -42,13 +42,14 @@ namespace Presentacion.Cliente
 
                 BLL.ClientesBLL bLL = new BLL.ClientesBLL();
                 bLL.Actualizar(cliente);
+
+                MessageBox.Show("Cliente actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            MessageBox.Show("Cliente actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

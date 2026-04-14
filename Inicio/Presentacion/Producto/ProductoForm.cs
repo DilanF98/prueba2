@@ -32,12 +32,18 @@ namespace Presentacion
 
         private void CargarVentas()
         {
-            ProductosBLL ProductoBll = new ProductosBLL();
-            List<ProductoDTO> lista = ProductoBll.ObtenerTodos();
+            ProductosBLL ProductoBLL = new ProductosBLL();
+            List<ProductoDTO> lista = ProductoBLL.ObtenerTodos();
             dgvProductos.DataSource = lista;
-        }
 
-     
+            // Stock total: suma de todos los Stock
+            int stockTotal = lista.Sum(p => p.Stock);
+            cardStockTotal.Text2 = stockTotal + " Unidades";
+
+            // Valor total del inventario: suma de (Precio * Stock) por producto
+            decimal valorTotal = lista.Sum(p => p.Precio * p.Stock);
+            cardValorTotal.Text2 = "₡" + valorTotal.ToString("N2");
+        }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {

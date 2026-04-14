@@ -1,9 +1,11 @@
 ﻿using DTO;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,9 +13,6 @@ namespace Presentacion
 {
     public partial class DashboardForm : Form
     {
-
-
-
         public DashboardForm()
         {
             InitializeComponent();
@@ -26,9 +25,49 @@ namespace Presentacion
             }
 
             //Texto Principal
-            lblTextoPrincipal.Text = "Hoy es " + DateTime.Now.ToString("dddd, dd MMMM yyyy") + " Hasta el momento las ventas se han procesado con normalidad \n";
+            lblTextoPrincipal.Text = "Hoy es " + DateTime.Now.ToString("dddd, dd MMMM yyyy") + "\n¡EdgeMarket PoS te desea un grandioso día!\n";
+            CargarCards();
+            CargarDGVs();
+        }
 
+        private void CargarCards()
+        {
+            // --- Ventas Totales ---
+            BLL.VentasBLL ventasBLL = new BLL.VentasBLL();
+            List<VentaDTO> listaVentas = ventasBLL.ObtenerTodas();
+            cardVentasTotales.Text2 = listaVentas.Count + " Ventas";
 
+            // --- Stock Total (suma de todos los productos) ---
+            BLL.ProductosBLL productosBLL = new BLL.ProductosBLL();
+            List<ProductoDTO> listaProductos = productosBLL.ObtenerTodos();
+            int stockTotal = listaProductos.Sum(p => p.Stock);
+            cardStock.Text2 = stockTotal + " Unidades";
+
+            // --- Vendedores Activos ---
+            BLL.VendedoresBLL vendedoresBLL = new BLL.VendedoresBLL();
+            List<VendedorListadoDTO> listaVendedores = vendedoresBLL.ObtenerTodos();
+            cardVendedores.Text2 = listaVendedores.Count + " Vendedores";
+        }
+
+        private void CargarDGVs()
+        {
+            // --- Últimas 10 ventas ---
+            BLL.VentasBLL ventasBLL = new BLL.VentasBLL();
+            List<VentaDTO> ultimasVentas = ventasBLL.ObtenerTodas()
+                .OrderByDescending(v => v.Fecha)
+                .Take(10)
+                .ToList();
+            dgvVentas.AutoGenerateColumns = false;
+            dgvVentas.DataSource = ultimasVentas;
+
+            // --- Top 50 productos con más stock ---
+            BLL.ProductosBLL productosBLL = new BLL.ProductosBLL();
+            List<ProductoDTO> topProductos = productosBLL.ObtenerTodos()
+                .OrderByDescending(p => p.Stock)
+                .Take(50)
+                .ToList();
+            dgvProductos.AutoGenerateColumns = false;
+            dgvProductos.DataSource = topProductos;
         }
 
         public DashboardForm(VendedorDTO vendedor)

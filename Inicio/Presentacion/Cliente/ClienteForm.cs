@@ -36,6 +36,9 @@ namespace Presentacion
             ClientesBLL ClienteBLL = new ClientesBLL();
             List<ClienteDTO> lista = ClienteBLL.ObtenerTodos();
             dgvClientes.DataSource = lista;
+
+            // Cantidad de clientes en el card
+            cardClientes.Text2 = lista.Count + " Clientes";
         }
 
         private void Listar()

@@ -1,6 +1,5 @@
 ﻿using DAO;
 using DTO;
-using MySqlX.XDevAPI;
 using System.Collections.Generic;
 
 namespace BLL
@@ -28,8 +27,18 @@ namespace BLL
 
             if (!cliente.Correo.Contains("@") || !cliente.Correo.Contains("."))
                 throw new System.Exception("El correo electrónico no es válido.");
-                
-            
+
+            List<ClienteDTO> listaClientes = dao.ObtenerTodos();
+
+            foreach (ClienteDTO c in listaClientes)
+            {
+                if (c.Telefono == cliente.Telefono)
+                    throw new Exception("El teléfono ya está registrado para otro cliente.");
+
+                if (c.Correo == cliente.Correo)
+                    throw new Exception("El correo electrónico ya está registrado para otro cliente.");
+            }
+
             dao.Insertar(cliente);
         }
 
@@ -52,6 +61,17 @@ namespace BLL
 
             if (!cliente.Correo.Contains("@") || !cliente.Correo.Contains("."))
                 throw new System.Exception("El correo electrónico no es válido.");
+
+            List<ClienteDTO> listaClientes = dao.ObtenerTodos();
+
+            foreach (ClienteDTO c in listaClientes)
+            {
+                if (c.IdCliente != cliente.IdCliente && c.Telefono == cliente.Telefono)
+                    throw new Exception("El teléfono ya está registrado para este u otro cliente.");
+
+                if (c.Correo == cliente.Correo)
+                    throw new Exception("El correo electrónico ya está registrado para este u otro cliente.");
+            }
 
             dao.Actualizar(cliente);
         }
