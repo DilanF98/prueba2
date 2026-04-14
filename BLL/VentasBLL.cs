@@ -70,12 +70,23 @@ namespace BLL
             ProductoDTO prod = productosDao.ObtenerPorCodigo(codigo);
             return prod != null ? prod.Nombre : codigo;
         }
-
-        public void Eliminar(int idVenta)
+                public void Eliminar(int idVenta)
         {
             VentaDTO venta = ObtenerPorId(idVenta);
             if (venta == null)
                 throw new Exception($"No existe ninguna venta con Id {idVenta}.");
+
+            // Recuperar los detalles para saber qué stock devolver
+            List<DetalleVentaDTO> detalles = detalleDao.ObtenerPorVenta(idVenta);
+            foreach (DetalleVentaDTO d in detalles)
+            {
+                ProductoDTO prod = productosDao.ObtenerPorCodigo(d.CodigoProducto);
+                if (prod != null)
+                {
+                    prod.Stock += d.Cantidad;   // devolver unidades al inventario
+                    productosDao.Actualizar(prod);
+                }
+            }
 
             ventasDao.Eliminar(idVenta);
         }
