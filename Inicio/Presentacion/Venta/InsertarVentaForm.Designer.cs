@@ -406,7 +406,6 @@ namespace UI.Venta
             cmbCliente.Name = "cmbCliente";
             cmbCliente.Size = new Size(363, 38);
             cmbCliente.TabIndex = 23;
-            cmbCliente.SelectedIndexChanged += cmbCliente_SelectedIndexChanged_1;
             // 
             // lblClienteDetalle
             // 

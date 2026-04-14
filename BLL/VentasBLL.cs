@@ -11,19 +11,23 @@ namespace BLL
         DetalleVentasDAO detalleDao = new DetalleVentasDAO();
         ProductosDAO productosDao = new ProductosDAO();
 
+        private const decimal iva = 0.13m;
+
         public int RegistrarVenta(VentaDTO venta, List<DetalleVentaDTO> detalles)
         {
             if (detalles == null || detalles.Count == 0)
                 throw new Exception("La venta debe tener al menos un producto.");
 
-            // Calcular total sumando subtotales
-            decimal total = 0;
+            // Calcular subtotal sumando líneas de detalle
+            decimal subtotal = 0;
             foreach (DetalleVentaDTO d in detalles)
             {
                 d.Subtotal = d.PrecioUnitario * d.Cantidad;
-                total += d.Subtotal;
+                subtotal += d.Subtotal;
             }
-            venta.Total = total;
+
+            // Guardar total CON IVA en la BD
+            venta.Total = subtotal + (subtotal * iva);
 
             // Paso 1: insertar cabecera de venta y obtener id
             int idVenta = ventasDao.Insertar(venta);
@@ -64,8 +68,9 @@ namespace BLL
         public string ObtenerNombreProducto(string codigo)
         {
             ProductoDTO prod = productosDao.ObtenerPorCodigo(codigo);
-            return prod != null ? prod.Nombre : codigo; 
+            return prod != null ? prod.Nombre : codigo;
         }
+
         public void Eliminar(int idVenta)
         {
             VentaDTO venta = ObtenerPorId(idVenta);

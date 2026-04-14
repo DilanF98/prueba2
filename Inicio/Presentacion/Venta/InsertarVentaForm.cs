@@ -288,16 +288,11 @@ namespace UI.Venta
                 return;
             }
 
-            decimal subtotal = _carro.Sum(x => x.Detalle.Subtotal);
-            decimal iva = subtotal * TASA_IVA;
-            decimal total = subtotal + iva;
-
             VentaDTO venta = new VentaDTO
             {
                 IdClienteFk = clienteSeleccionado.IdCliente,
                 IdVendedorFk = _vendedorActivo.IdVendedor,
-                Fecha = DateTime.Now,
-                Total = total
+                Fecha = DateTime.Now
             };
 
             List<DetalleVentaDTO> detalles = _carro.Select(x => x.Detalle).ToList();
@@ -305,8 +300,9 @@ namespace UI.Venta
             try
             {
                 int idVenta = ventasBll.RegistrarVenta(venta, detalles);
+                decimal totalFinal = ventasBll.ObtenerPorId(idVenta).Total;
 
-                MessageBox.Show($"¡Venta #{idVenta} registrada exitosamente!\nTotal: ₡{total:N2}",
+                MessageBox.Show($"¡Venta #{idVenta} registrada exitosamente!\nTotal: ₡{totalFinal:N2}",
                                 "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LimpiarFormulario();
@@ -358,11 +354,6 @@ namespace UI.Venta
 
             txtCantidad.TextButton = string.Empty;
             txtPrecio.TextButton = string.Empty;
-        }
-
-        private void cmbCliente_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
