@@ -18,8 +18,6 @@ namespace Presentacion.Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Agregar lógica para guardar el cliente en la base de datos
-
             try
             {
                 ClienteDTO cliente = new ClienteDTO();
