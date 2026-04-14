@@ -45,8 +45,8 @@ namespace BLL
             {
                 throw new Exception("El usuario es obligatorio.");
             }
-            // La contraseña es opcional al actualizar, null significa "no cambiar".
-            // El DAO ya maneja este caso.
+            // Mejor que la contraseña es opcional al actualizar, null significa "no cambiar"
+            // No validar como obligatoria aquí; el DAO ya lo maneja
             dao.Actualizar(vendedor);
         }
 

@@ -27,12 +27,12 @@ namespace BLL
 
             if (string.IsNullOrEmpty(producto.Codigo))
             {
-                throw new System.Exception("El código del producto es obligatorio.");
+                throw new Exception("El código del producto es obligatorio.");
             }
 
             if (dao.ObtenerPorCodigo(producto.Codigo) != null)
             {
-                throw new System.Exception("El código ya existe.");
+                throw new Exception("El código ya existe.");
             }
 
             dao.Insertar(producto);
@@ -48,7 +48,7 @@ namespace BLL
             ProductoDTO existente = dao.ObtenerPorCodigo(producto.Codigo);
             if (existente != null && existente.IdProducto != producto.IdProducto)
             {
-                throw new System.Exception("El código ya está en uso por otro producto.");
+                throw new Exception("El código ya está en uso por otro producto.");
             }
 
             if (producto.Precio <= 0)
