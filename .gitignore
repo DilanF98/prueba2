@@ -1,0 +1,10 @@
+# Visual Studio
+.vs/
+
+# Directorios de build (en cualquier subcarpeta)
+**/[Bb]in/
+**/[Oo]bj/
+
+# Archivos de usuario
+*.user
+*.suo
