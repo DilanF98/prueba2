@@ -39,10 +39,6 @@ namespace UI.Vendedor
                 MessageBox.Show("Error: " + ex.Message);
                 return;
             }
-
-
-            MessageBox.Show("Vendedor eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
     }
 }

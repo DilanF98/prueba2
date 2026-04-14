@@ -48,7 +48,6 @@ namespace UI.Vendedor
                 BLL.VendedoresBLL bll = new BLL.VendedoresBLL();
                 bll.Insertar(vendedor);
 
-                //Agregar lógica para guardar el vendedor en la base de datos
                 MessageBox.Show("Vendedor guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

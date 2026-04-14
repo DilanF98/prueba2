@@ -31,10 +31,10 @@ namespace BLL
         {
             if (string.IsNullOrEmpty(vendedor.Nombre))
                 throw new Exception("El nombre es obligatorio.");
-            if(string.IsNullOrEmpty(vendedor.Usuario))
+            if (string.IsNullOrEmpty(vendedor.Usuario))
                 throw new Exception("El usuario es obligatorio.");
-            if (string.IsNullOrEmpty(vendedor.Contrasena))
-                throw new Exception("La contraseña es obligatoria.");
+            // Mejor que la contraseña es opcional al actualizar, null significa "no cambiar"
+            // No validar como obligatoria aquí; el DAO ya lo maneja
             dao.Actualizar(vendedor);
         }
 
